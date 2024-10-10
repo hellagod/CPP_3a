@@ -1,4 +1,4 @@
-def greedy_naive_solution(n, weights):
+def greedy_naive_solution(weights, n):
     cliques = []
     edges = [(i, j, weights[i][j]) for i in range(n) for j in range(i + 1, n)]
     edges.sort(key=lambda x: x[-1], reverse=True)
@@ -32,6 +32,6 @@ test_w = [[-10, -3, -10, 4, -6, -1],
           [-5, 4, -5, 2, 8, 1],
           [6, -1, 10, 10, 3, -3]]
 
-init_solution = greedy_naive_solution(test_n, test_w)
+init_solution = greedy_naive_solution(test_w, test_n)
 
 print(init_solution)
