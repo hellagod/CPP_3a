@@ -2,6 +2,7 @@ import copy
 import numpy as np
 
 from alg1 import greedy_naive_solution
+from alg2 import vertex_deleter
 from itertools import accumulate
 
 import copy
