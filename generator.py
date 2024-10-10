@@ -9,8 +9,8 @@ def generate(n):
 
     for i in range(n):
         for j in range(i + 1):
-            if random.random() < 0.8:
-                value = random.randint(1, 10)
+            if random.random() < 0.9:
+                value = random.randint(-1000, 3000)
                 matrix[i][j] = value
 
     for i in range(n):
@@ -25,4 +25,4 @@ def generate(n):
 
 
 with open(f'dataset.json', 'w', encoding='utf-8') as file:
-    json.dump(generate(10), file, ensure_ascii=False)
+    json.dump(generate(100), file, ensure_ascii=False)
